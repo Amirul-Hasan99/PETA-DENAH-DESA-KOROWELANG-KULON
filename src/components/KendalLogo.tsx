@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 
-export const KENDAL_LOGO_URL =
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg/480px-Emblem_of_Kendal_Regency_%282011%29.svg.png';
+// Primary high-speed global CDN URL and fallback mirrors
+export const PRIMARY_LOGO_URL =
+  'https://wsrv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg/500px-Emblem_of_Kendal_Regency_%282011%29.svg.png';
+
+export const BACKUP_LOGO_URLS = [
+  'https://images.weserv.nl/?url=https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg/500px-Emblem_of_Kendal_Regency_%282011%29.svg.png',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg/500px-Emblem_of_Kendal_Regency_%282011%29.svg.png',
+  'https://upload.wikimedia.org/wikipedia/commons/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg',
+];
 
 interface KendalLogoProps {
   className?: string;
@@ -12,36 +19,36 @@ interface KendalLogoProps {
 export const KendalLogo: React.FC<KendalLogoProps> = ({
   className = '',
   size = 'md',
-  alt = 'Lambang Kabupaten Kendal - Ngesti Widdhi',
+  alt = 'Lambang Kabupaten Kendal - Ngesti Widdhi 1605',
 }) => {
-  const [hasError, setHasError] = useState(false);
+  const [urlIndex, setUrlIndex] = useState(0);
 
   const sizeClasses = {
-    sm: 'w-7 h-9',
-    md: 'w-9 h-11',
-    lg: 'w-12 h-15',
-    xl: 'w-16 h-20',
+    sm: 'w-8 h-10',
+    md: 'w-10 h-12 md:w-11 md:h-13',
+    lg: 'w-12 h-15 md:w-14 md:h-17',
+    xl: 'w-16 h-20 md:w-20 md:h-24',
   };
 
-  if (hasError) {
-    return (
-      <div
-        className={`flex flex-col items-center justify-center rounded bg-[#001e40] text-[#ffd700] font-bold border border-[#ffd700]/30 shadow-xs ${sizeClasses[size]} ${className}`}
-        title="Kabupaten Kendal"
-      >
-        <span className="text-[10px] font-black tracking-tighter">KDL</span>
-        <span className="text-[7px] text-white">1605</span>
-      </div>
-    );
-  }
+  const allUrls = [PRIMARY_LOGO_URL, ...BACKUP_LOGO_URLS];
+  const currentSrc = allUrls[urlIndex] || PRIMARY_LOGO_URL;
+
+  const handleImageError = () => {
+    if (urlIndex < allUrls.length - 1) {
+      setUrlIndex(prev => prev + 1);
+    }
+  };
 
   return (
     <img
-      src={KENDAL_LOGO_URL}
+      src={currentSrc}
       alt={alt}
       loading="eager"
-      onError={() => setHasError(true)}
-      className={`${sizeClasses[size]} object-contain drop-shadow-sm transition-transform ${className}`}
+      decoding="async"
+      referrerPolicy="no-referrer"
+      crossOrigin="anonymous"
+      onError={handleImageError}
+      className={`${sizeClasses[size]} object-contain drop-shadow-sm transition-transform select-none ${className}`}
     />
   );
 };
