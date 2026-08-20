@@ -1,0 +1,6 @@
+{
+  "name": "Desa Korowelang Kulon - Geografi & Peta Desa",
+  "description": "Portal resmi informasi geografis, peta wilayah denah administrasi, potensi wilayah, dan galeri fasilitas Desa Korowelang Kulon, Kecamatan Cepiring, Kabupaten Kendal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
