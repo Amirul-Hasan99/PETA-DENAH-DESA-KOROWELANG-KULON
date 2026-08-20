@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { X, Image as ImageIcon, Sparkles, Filter, Calendar, Tag } from 'lucide-react';
+import { X, Sparkles, Filter, Calendar, Tag } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/villageData';
 import { GalleryItem } from '../types';
+import { KendalLogo } from './KendalLogo';
 
 interface GalleryModalProps {
   isOpen: boolean;
@@ -25,9 +26,9 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ isOpen, onClose }) =
       <div className="bg-white rounded-xl w-full max-w-5xl h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-[#d3e4fe]">
         {/* Header */}
         <div className="bg-[#001e40] text-white px-5 py-4 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded bg-[#003366] text-[#d5e3ff]">
-              <ImageIcon className="w-5 h-5" />
+          <div className="flex items-center gap-3.5">
+            <div className="p-1 rounded-lg bg-white/10 border border-white/20 backdrop-blur-xs flex items-center justify-center shrink-0">
+              <KendalLogo size="sm" className="w-8 h-10" />
             </div>
             <div>
               <h2 className="font-display font-bold text-base sm:text-lg text-white">
