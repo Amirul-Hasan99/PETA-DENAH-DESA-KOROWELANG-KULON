@@ -188,20 +188,20 @@ export const MapModal: React.FC<MapModalProps> = ({ isOpen, onClose }) => {
                   <span>Metadata Geospasial:</span>
                 </div>
                 <div className="flex justify-between text-[11px] pt-1">
-                  <span className="text-[#737780]">Datum:</span>
-                  <span className="font-semibold text-[#001e40]">WGS 1984</span>
+                  <span className="text-[#737780]">Luas Total:</span>
+                  <span className="font-semibold text-[#001e40]">162,447 Ha</span>
                 </div>
                 <div className="flex justify-between text-[11px]">
-                  <span className="text-[#737780]">Proyeksi:</span>
-                  <span className="font-semibold text-[#001e40]">UTM Zone 49S</span>
+                  <span className="text-[#737780]">Pembagian:</span>
+                  <span className="font-semibold text-[#001e40]">3 Dusun • 26 RT</span>
+                </div>
+                <div className="flex justify-between text-[11px]">
+                  <span className="text-[#737780]">Datum / Proyeksi:</span>
+                  <span className="font-semibold text-[#001e40]">WGS 84 / UTM 49S</span>
                 </div>
                 <div className="flex justify-between text-[11px]">
                   <span className="text-[#737780]">Skala Induk:</span>
                   <span className="font-semibold text-[#001e40]">1 : 25.000</span>
-                </div>
-                <div className="flex justify-between text-[11px]">
-                  <span className="text-[#737780]">Tahun Pemutakhiran:</span>
-                  <span className="font-semibold text-[#001e40]">2024</span>
                 </div>
               </div>
             </div>

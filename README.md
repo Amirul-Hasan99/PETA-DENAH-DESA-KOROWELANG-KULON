@@ -1,203 +1,178 @@
-# 🌾 Portal Geografis & Peta Denah Desa Korowelang Kulon
+# Portal Geografis & Peta Denah Desa Korowelang Kulon
 
-<div align="center">
-
-![Lambang Kabupaten Kendal](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Emblem_of_Kendal_Regency_%282011%29.svg/160px-Emblem_of_Kendal_Regency_%282011%29.svg.png)
-
-### **Pemerintah Desa Korowelang Kulon**
+### Pemerintah Desa Korowelang Kulon
 **Kecamatan Cepiring, Kabupaten Kendal, Provinsi Jawa Tengah**
 
-[![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-0.54-F05340?style=for-the-badge&logo=lucide&logoColor=white)](https://lucide.dev/)
+*Platform Web Interaktif untuk Informasi Geografis, Peta Denah Wilayah, Tata Guna Lahan (162,447 Ha), Monografi Kependudukan (3.252 Jiwa), SOTK Pemerintah Desa, Visi-Misi, dan Sejarah Desa Korowelang Kulon.*
 
-*Platform Web Interaktif untuk Informasi Geografis, Peta Denah Wilayah, Tata Guna Lahan, Potensi Desa, dan Fasilitas Layanan Publik Desa Korowelang Kulon.*
-
-</div>
+[Website Resmi DOKAR](https://korowelangkulon.kendalkab.go.id)
 
 ---
 
-## 📖 Daftar Isi
+## Daftar Isi
 
-- [Tentang Proyek](#-tentang-proyek)
-- [Fitur Utama](#-fitur-utama)
-- [Gambaran Wilayah Desa](#-gambaran-wilayah-desa)
-- [Teknologi & Dependensi](#-teknologi--dependensi)
-- [Struktur Direktori](#-struktur-direktori)
-- [Panduan Instalasi & Menjalankan](#-panduan-instalasi--menjalankan)
-- [Filosofi Lambang Kabupaten Kendal](#-filosofi-lambang-kabupaten-kendal)
-- [Layanan Administrasi Desa](#-layanan-administrasi-desa)
-- [Kontak & Informasi Pemdes](#-kontak--informasi-pemdes)
-- [Lisensi](#-lisensi)
-
----
-
-## 🏛️ Tentang Proyek
-
-**Portal Geografis & Peta Denah Desa Korowelang Kulon** adalah aplikasi web modern yang dirancang untuk menyajikan informasi spasial, denah wilayah administratif, zonasi potensi lokal, serta transparansi pelayanan desa secara digital, interaktif, dan mudah diakses oleh warga masyarakat maupun pemangku kepentingan.
-
-Aplikasi ini mengintegrasikan peta grafis interaktif berbasis SVG berlapis (*layering system*), ringkasan statistik geografis dan demografi, profil pemerintahan desa, transparansi anggaran APBDes, serta galeri fasilitas publik.
+- [Tentang Proyek](#tentang-proyek)
+- [Visi dan Misi Desa 2020-2026](#visi-dan-misi-desa-2020-2026)
+- [Sejarah Desa & Silsilah 22 Kepala Desa](#sejarah-desa--silsilah-22-kepala-desa)
+- [Gambaran Wilayah & Monografi Desa](#gambaran-wilayah--monografi-desa)
+- [Struktur Organisasi Pemerintah Desa](#struktur-organisasi-pemerintah-desa)
+- [Fitur Utama Aplikasi](#fitur-utama-aplikasi)
+- [Teknologi & Dependensi](#teknologi--dependensi)
+- [Panduan Instalasi & Menjalankan](#panduan-instalasi--menjalankan)
+- [Layanan Administrasi Desa](#layanan-administrasi-desa)
+- [Kontak & Media Sosial Pemdes](#kontak--media-sosial-pemdes)
 
 ---
 
-## ✨ Fitur Utama
+## Tentang Proyek
 
-### 1. 🗺️ Peta Denah Interaktif & Visualisasi Wilayah
-- **Peta Grafis Multi-Layer**: Menampilkan pembagian zona wilayah meliputi:
-  - 🏛️ Batas Wilayah Administrasi & 4 Dusun (Krajan, Tambaksari, Karanganyar, Sidoasri)
-  - 🌾 Kawasan Persawahan & Irigasi Teknis (±210 Ha)
-  - 🏡 Zona Permukiman Penduduk (±75 Ha)
-  - 🦐 Kawasan Tambak Perikanan & Pesisir Utara (±45 Ha)
-  - 🏫 Fasilitas Umum & Sosial (Balai Desa, Poskesdes, Masjid, Sekolah)
-  - 🚨 Jalur Evakuasi & Mitigasi Tanggap Bencana
-- **Interactive Layer Switcher**: Pengguna dapat mengaktifkan atau menonaktifkan layer peta sesuai kebutuhan analisis.
-- **Mode Tinjauan Penuh (Full Modal Preview)**: Tampilan peta resolusi tinggi yang nyaman ditelusuri.
-- **Fitur Unduh Peta**: Mengunduh ringkasan data geospasial resmi desa.
+**Portal Geografis & Peta Denah Desa Korowelang Kulon** adalah aplikasi web modern yang menyajikan data geospasial resmi, batas wilayah administratif, distribusi pola tata guna lahan, kependudukan, silsilah kepemimpinan sejak 1803, serta monografi lengkap Desa Korowelang Kulon, Kecamatan Cepiring, Kabupaten Kendal.
 
-### 2. 📊 Kartu Statistik Geografi, Luas & Potensi
-- **Geografi**: Koordinat, iklim pesisir, ketinggian (3 - 8 mdpl), batas wilayah utara (Laut Jawa), timur (Korowelang Anyar), selatan (Margorejo), dan barat (Pidodo Kulon).
-- **Luas Wilayah**: Distribusi persentase lahan (Pertanian 60%, Permukiman 21.4%, Tambak 12.8%, Fasum 5.8%).
-- **Potensi Unggulan**: Komoditas padi (±1.400 Ton/Th), perikanan bandeng presto & udang (±180 Ton/Th), serta 42 unit kelompok UMKM aktif.
-
-### 3. 📜 Profil Pemerintahan & Sejarah Desa
-- **Visi & Misi Periode 2020 - 2026**: Rencana pembangunan desa yang mandiri, sejahtera, dan berbasis digital.
-- **Sejarah & Asal-Usul Desa**: Babad perjuangan zaman Tumenggung Bahurekso dan cikal bakal nama *Korowelang*.
-- **Struktur Perangkat Desa**: Kepala Desa, Sekretaris Desa, Kaur/Kasi, dan Kepala Dusun (Kadus).
-- **Transparansi APBDes**: Ringkasan alokasi pendapatan dan belanja desa terkini.
-
-### 4. 🖼️ Galeri Fasilitas & Pelayanan Publik
-- Dokumentasi foto Balai Desa dan Loket PATEN (*Pelayanan Administrasi Terpadu Desa*).
-- Fasilitas Gedung Serbaguna, Pos Kesehatan Desa (Poskesdes/Posyandu), serta kawasan pertanian dan perikanan pesisir.
-
-### 5. 📱 Desain Responsif & Modern
-- Dirancang menggunakan prinsip UI/UX kontemporer (palet warna naval & emerald, tipografi *Plus Jakarta Sans*, tata letak fleksibel untuk HP, tablet, dan desktop).
+Seluruh data disinkronkan secara akurat dengan data monografi dan profil resmi Pemerintah Desa Korowelang Kulon ([korowelangkulon.kendalkab.go.id](https://korowelangkulon.kendalkab.go.id)).
 
 ---
 
-## 📍 Gambaran Wilayah Desa
+## Visi dan Misi Desa 2020-2026
 
-| Parameter | Keterangan |
+### VISI
+
+> **"TERWUJUDNYA DESA KOROWELANGKULON YANG SEJAHTERA, TERTIB, MANDIRI, AMAN, DAN RAPI."**
+
+#### Makna 5 Pilar Visi:
+1. **Sejahtera**: Mampu mewujudkan kondisi masyarakat yang terpenuhi hak-hak dasarnya baik dari aspek kesehatan, pendidikan dan ekonomi yang ditandai dengan meningkatnya angka Indeks Pembangunan Manusia (IPM) yang didukung dengan terwujudnya kebebasan kehidupan beragama dan bernegara.
+2. **Tertib**: Mampu mewujudkan perilaku aparatur pemerintah dan masyarakat yang selalu berpegang pada aturan dan norma-norma yang berlaku dalam kehidupan bermasyarakat dan bernegara.
+3. **Mandiri**: Mampu mewujudkan kehidupan yang sejajar, sederajat serta saling berinteraksi dengan desa lain dengan mengandalkan pada kemampuan dan kekuatan sendiri melalui kerjasama yang saling mendukung.
+4. **Aman**: Mampu mewujudkan kehidupan yang kondusif, aman tentram tanpa ada suatu gejolak, baik politik maupun lainnya.
+5. **Rapi**: Mampu mewujudkan wilayah yang rapi dengan tata letak keindahan yang sesuai dengan konsep tata ruang yang baik.
+
+### MISI
+
+1. Meningkatkan kualitas SDM yang beriman dan bertaqwa kepada Tuhan YME, berbudaya serta menguasai ilmu pengetahuan dan teknologi.
+2. Mewujudkan lingkungan yang aman dan kondusif dengan cara mendorong dan memaksimalkan peran dan fungsi linmas dan penjagaan keamanan lingkungan.
+3. Mewujudkan masyarakat yang sehat, cerdas, kreatif, beriman dan bertaqwa kepada Tuhan Yang Maha Esa serta berbudaya dan menguasai ilmu pengetahuan dan teknologi guna penciptaan lapangan kerja dan daya saing.
+4. Menciptakan pemerintahan yang maju dan modern dengan meningkatkan kualitas SDM perangkat dan memaksimalkan teknologi berbasis online.
+5. Mendorong terciptanya pengelolaan sumberdaya alam dan lingkungan hidup dengan tetap menjaga kelestariannya sesuai dengan konsep tata ruang.
+
+---
+
+## Sejarah Desa & Silsilah 22 Kepala Desa
+
+### Asal-Usul Nama Korowelang Kulon (± Tahun 1803)
+Menurut perkiraan, Desa Korowelangkulon berdiri sekitar tahun ± 1803 pada zaman penjajahan Belanda. **Mbah Srengono** yang berasal dari Lumajang, Jawa Timur melakukan perjalanan ke arah barat lewat pesisir pantai utara Jawa. Saat sampai di sebuah alas (hutan) dan beliau membuka alas tersebut, terdapat **Tanaman Koro yang menjalar di Batang Pohon Dhurjan** dari bawah hingga ujung batang. Pada saat membuka alas tersebut, Mbah Srengono melihat seekor **Ular Welang** bercorak hitam putih dengan kepala menghadap ke arah barat (*kulon*). Setelah selesai babad alas, beliau menamakan daerah tersebut dengan sebutan **Korowelangkulon**.
+
+*Tonton dokumenter sejarah*: [YouTube Video Sejarah Desa Korowelang Kulon](https://www.youtube.com/watch?v=y3lR13fQEM0)
+
+### Sejarah Pemakaman Umum "Kupu Tarung"
+Makam Kupu Tarung adalah tempat pemakaman umum (TPU) yang berada di sebelah barat dan timur yang dipisahkan oleh akses jalan menuju Sungai Bodri. Nama Kupu Tarung didapat dari kejadian unik: terdapat **Pohon Waru dan Pohon Ketapeng** yang tumbuh di sisi berlawanan saling bertolak dan batangnya bertemu di atas jalan menyerupai dua pohon yang sedang bertarung dengan siluet sayap kupu-kupu.
+
+### Linimasa 22 Kepala Desa Korowelang Kulon (1803 - Sekarang)
+
+| No | Nama Kepala Desa | Masa Jabatan | Lama Menjabat | Status |
+| :-: | :--- | :---: | :---: | :---: |
+| 1 | Srengono | 1803 s.d 1833 | 30 Tahun | Definitif |
+| 2 | Katem | 1833 s.d 1858 | 25 Tahun | Definitif |
+| 3 | Kasman | 1858 s.d 1879 | 21 Tahun | Definitif |
+| 4 | Kardan | 1879 s.d 1892 | 13 Tahun | Definitif |
+| 5 | Sastro Entok | 1892 s.d 1902 | 10 Tahun | Definitif |
+| 6 | Karjoyo | 1902 s.d 1917 | 15 Tahun | Definitif |
+| 7 | Sudarmo | 1917 s.d 1923 | 6 Tahun | Definitif |
+| 8 | Reso Usup | 1923 s.d 1946 | 23 Tahun | Definitif |
+| 9 | Karjono | 1946 s.d 1949 | 3 Tahun | Definitif |
+| 10 | Sumari | 1949 s.d 1952 | 3 Tahun | Ymt |
+| 11 | Karjono | 1952 s.d 1963 | 11 Tahun | Definitif |
+| 12 | Sunardi | 1963 s.d 1964 | 1 Tahun | Ymt |
+| 13 | Sunardi | 1964 s.d 1972 | 8 Tahun | Definitif |
+| 14 | Suparmo | 1972 s.d 1988 | 16 Tahun | Definitif |
+| 15 | Musrip | 1988 s.d 1989 | 1 Tahun | Ymt |
+| 16 | Djaelani | 1989 s.d 1997 | 8 Tahun | Definitif |
+| 17 | Fauzan | 1997 s.d 1999 | 2 Tahun | Ymt |
+| 18 | Djaelani | 1999 s.d 2007 | 8 Tahun | Definitif |
+| 19 | Gunoto | 2007 s.d 2007 | 3 Bulan | Ymt |
+| 20 | Triyono | 2007 s.d 2019 | 12 Tahun | Definitif |
+| 21 | Dyna Puspasari | 2019 s.d 2020 | 8 Bulan | Pj. |
+| 22 | **Gunoto** | **2020 s.d Sekarang** | - | **Sedang Menjabat** |
+
+---
+
+## Gambaran Wilayah & Monografi Desa
+
+| Parameter | Data Resmi |
 | :--- | :--- |
 | **Nama Desa** | Desa Korowelang Kulon |
 | **Kecamatan** | Cepiring |
 | **Kabupaten** | Kendal |
 | **Provinsi** | Jawa Tengah |
 | **Kode Pos** | 51352 |
-| **Luas Wilayah** | ± 350 Hektar (3,5 km²) |
-| **Ketinggian** | 3 – 8 meter di atas permukaan laut (mdpl) |
-| **Batas Utara** | Laut Jawa / Pesisir Utara |
-| **Batas Timur** | Desa Korowelang Anyar |
-| **Batas Selatan** | Desa Margorejo |
-| **Batas Barat** | Desa Pidodo Kulon |
-| **Dusun** | Dusun Krajan, Dusun Tambaksari, Dusun Karanganyar, Dusun Sidoasri |
+| **Luas Wilayah Total** | **162,447 Ha** |
+| **Tanah Sawah Irigasi Teknis** | **105,447 Ha** (64,9%) |
+| **Tanah Pekarangan & Bangunan** | **39,897 Ha** (24,5%) |
+| **Tegal / Kebun** | **34,227 Ha** (21,0%) |
+| **Kawasan Tambak Perikanan** | **17,223 Ha** (10,6%) |
+| **Makam Kupu Tarung & Lainnya** | **0,800 Ha** (0,5%) |
+| **Jumlah Penduduk (2020)** | **3.252 Jiwa** (Laki-laki: 1.558, Perempuan: 1.694) |
+| **Jumlah Kepala Keluarga (KK)** | **1.124 KK** |
+| **Pembagian Dusun** | 3 Dusun (**Welangsari, Tambaksari, Rejosari**) |
+| **Jumlah Rukun Tetangga (RT)** | **26 RT** |
+| **Batas Utara** | Desa Korowelanganyar, Kec. Cepiring |
+| **Batas Timur** | Sungai Bodri / Desa Wonosari, Kumpulrejo, Magersari (Kec. Patebon) |
+| **Batas Selatan** | Desa Kalirandugede, Kec. Cepiring |
+| **Batas Barat** | Desa Kalirandugede, Kec. Cepiring |
 
 ---
 
-## 🛠️ Teknologi & Dependensi
+## Struktur Organisasi Pemerintah Desa
 
-Proyek ini dibangun dengan susunan teknologi modern:
-
-- **[React 19](https://react.dev/)**: Library utama untuk antarmuka pengguna berbasis komponen.
-- **[TypeScript](https://www.typescriptlang.org/)**: Pengetikan statis untuk keandalan dan skalabilitas kode.
-- **[Vite 6](https://vitejs.dev/)**: Build tool dan bundler super cepat dengan Hot Module Replacement (HMR).
-- **[Tailwind CSS v4](https://tailwindcss.com/)**: Framework utility-first CSS modern untuk styling responsif dan presisi.
-- **[Lucide React](https://lucide.dev/)**: Koleksi ikon antarmuka yang bersih dan konsisten.
-- **[Motion](https://motion.dev/)**: Animasi transisi yang halus dan interaktif.
+| No | Nama | Jabatan | Pendidikan | Nomor & Tanggal SK |
+| :-: | :--- | :--- | :--- | :--- |
+| 1 | **Gunoto** | Kepala Desa | SMA/SMK/MA/Sederajat | No. 141/254/2020 (28-04-2020) |
+| 2 | **R Nurhadi Arif Zuliyanto** | Sekretaris Desa | Strata 1 (S-1) | No. 141/1/2018 (05-01-2018) |
+| 3 | **Setiawan** | Kaur TU dan Umum | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
+| 4 | **Khaeroni** | Kaur Keuangan | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
+| 5 | **Edi Mulyono** | Kaur Perencanaan | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
+| 6 | **Gusiyo** | Kasi Pemerintahan | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
+| 7 | **Siti Khotijah Titik Wahyuni** | Kasi Kesejahteraan & Pelayanan | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
+| 8 | **Trady Kasmun** | Kepala Dusun I | SMA/SMK/MA/Sederajat | No. 141/5/2017 (31-01-2017) |
 
 ---
 
-## 📁 Struktur Direktori
+## Fitur Utama Aplikasi
 
-```text
-PETA-DENAH-DESA-KOROWELANG-KULON/
-├── assets/                  # Aset statis pendukung
-├── public/                  # Berkas publik
-├── src/
-│   ├── components/          # Komponen UI React
-│   │   ├── Footer.tsx             # Footer dengan identitas Pemdes & Logo Kendal
-│   │   ├── GalleryModal.tsx       # Modal detail galeri & fasilitas
-│   │   ├── GallerySection.tsx     # Seksi preview galeri desa
-│   │   ├── HeroSection.tsx        # Hero banner & pengenalan judul
-│   │   ├── KendalLogo.tsx         # Komponen resmi Lambang Kabupaten Kendal
-│   │   ├── MapCard.tsx            # Card showcase peta & tombol unduh
-│   │   ├── MapModal.tsx           # Modal tinjauan peta interaktif & layer toggle
-│   │   ├── Navbar.tsx             # Navigasi utama dengan Logo Kendal & menu tab
-│   │   ├── ProfileModal.tsx       # Modal profil desa, visi misi & aparatur
-│   │   ├── StatsGrid.tsx          # Grid statistik geografi, luas & potensi
-│   │   └── VillageMapGraphic.tsx  # Grafis vektor SVG peta denah desa
-│   ├── data/
-│   │   └── villageData.ts         # Data informasi desa, layer, statistik & layanan
-│   ├── App.tsx              # Komponen utama aplikasi
-│   ├── index.css            # Setup styling Tailwind CSS v4 & font
-│   ├── main.tsx             # Entry point React DOM
-│   └── types.ts             # Definisi antarmuka TypeScript
-├── index.html               # Dokumen HTML utama & favicon
-├── package.json             # Konfigurasi dependensi dan skrip proyek
-├── tsconfig.json            # Konfigurasi TypeScript
-├── vite.config.ts           # Konfigurasi Vite & Tailwind plugin
-└── README.md                # Dokumentasi proyek
+1. **Peta Denah Interaktif**: Visualisasi SVG spasial dengan layer batas 3 dusun, sawah irigasi teknis 105,447 Ha, pekarangan, tambak, Sungai Bodri, dan Makam Kupu Tarung.
+2. **Modal Profil Multi-Tab**: Menampilkan Visi & Misi, Sejarah & 22 Kades, Geografi & Lahan, Demografi & Usia, Aparatur & SOTK, Ekonomi & Usaha, serta Pendidikan & Kesehatan.
+3. **Statistik Interaktif**: Kartu data geografi, luas lahan, dan potensi ekonomi desa.
+4. **Galeri & Pelayanan**: Dokumentasi fasilitas desa dan standar pelayanan publik (PATEN).
+
+---
+
+## Teknologi & Dependensi
+
+- **React 19**
+- **TypeScript 5.8**
+- **Vite 6**
+- **Tailwind CSS v4**
+- **Lucide React**
+
+---
+
+## Panduan Instalasi & Menjalankan
+
+```bash
+# 1. Buka direktori proyek
+cd "PETA-DENAH-DESA-KOROWELANG-KULON"
+
+# 2. Instal dependensi
+npm install
+
+# 3. Jalankan server lokal
+npm run dev
+
+# 4. Build untuk tahap produksi
+npm run build
 ```
 
 ---
 
-## 🚀 Panduan Instalasi & Menjalankan
-
-### Prasyarat
-Pastikan Anda telah menginstal:
-- **Node.js** (versi 18.0 atau yang lebih baru)
-- **npm** atau **yarn** / **pnpm**
-
-### Langkah-Langkah
-
-1. **Buka Direktori Proyek**
-   ```bash
-   cd "PETA-DENAH-DESA-KOROWELANG-KULON"
-   ```
-
-2. **Instal Dependensi**
-   ```bash
-   npm install
-   ```
-
-3. **Jalankan Server Pengembangan (Development Server)**
-   ```bash
-   npm run dev
-   ```
-   Aplikasi akan berjalan di `http://localhost:3000` (atau port yang ditentukan Vite).
-
-4. **Build untuk Produksi**
-   ```bash
-   npm run build
-   ```
-   Hasil kompilasi produksi siap rilis akan tersimpan di direktori `dist/`.
-
-5. **Pratinjau Hasil Build Produksi**
-   ```bash
-   npm run preview
-   ```
-
----
-
-## 🛡️ Filosofi Lambang Kabupaten Kendal
-
-Aplikasi ini menggunakan lambang resmi **Kabupaten Kendal** (*Perda Kab. Kendal No. 21 Tahun 2011*) pada navigasi, footer, dan modal profil:
-
-- **Bentuk Perisai Kuning**: Melambangkan perlindungan, kemakmuran, dan ketenteraman masyarakat.
-- **Bintang Emas**: Melambangkan Ketuhanan Yang Maha Esa dan nilai-nilai luhur Pancasila.
-- **Pita Merah Putih & Selendang Hijau**: Menegaskan kesetiaan pada NKRI serta kesuburan alam Kendal.
-- **Semboyan "NGESTI WIDDHI"**: Makna tekad bulat dan niat suci dalam memohon petunjuk serta ridho Tuhan Yang Maha Kuasa.
-- **Keris Luk**: Melambangkan jiwa kepahlawanan dan keteladanan Tumenggung Bahurekso sebagai Bupati Pertama Kendal.
-- **Roda Gigi Merah**: Simbol industrialisasi, etos kerja keras, dan pembangunan berkesinambungan.
-- **Padi dan Kapas**: Lambang kemakmuran, ketersediaan pangan, dan sandang bagi seluruh masyarakat.
-- **Perahu Berornamen & Ombak Biru**: Melambangkan karakter maritim pesisir utara, ketangguhan nelayan, serta angka tahun berdirinya Kabupaten Kendal (**1605**).
-
----
-
-## 📋 Layanan Administrasi Desa
-
-Masyarakat dapat mengakses panduan persyaratan administrasi di Balai Desa Korowelang Kulon:
+## Layanan Administrasi Desa
 
 | Kode | Jenis Layanan | Estimasi Waktu | Biaya |
 | :--- | :--- | :--- | :--- |
@@ -209,16 +184,12 @@ Masyarakat dapat mengakses panduan persyaratan administrasi di Balai Desa Korowe
 
 ---
 
-## 📞 Kontak & Informasi Pemdes
+## Kontak & Media Sosial Pemdes
 
-- **Alamat Kantor**: Jl. Raya Korowelang Kulon No. 1, Kecamatan Cepiring, Kabupaten Kendal, Jawa Tengah 51352
-- **Jam Layanan**: Senin – Jumat | 08:00 – 15:00 WIB
-- **Email Resmi**: [pemdes@korowelangkulon.desa.id](mailto:pemdes@korowelangkulon.desa.id)
-- **WhatsApp Pelayanan**: +62 812-3456-7890
-
----
-
-## 📄 Lisensi
-
-Hak Cipta © 2024–2026 **Pemerintah Desa Korowelang Kulon, Kecamatan Cepiring, Kabupaten Kendal**.  
-Seluruh hak cipta dan data spasial dilindungi oleh peraturan perundang-undangan yang berlaku.
+- **Alamat Kantor**: Kantor Balai Desa Korowelang Kulon, Jl. Raya Korowelang Kulon, Kec. Cepiring, Kab. Kendal, Jawa Tengah 51352
+- **Website Resmi DOKAR**: [https://korowelangkulon.kendalkab.go.id](https://korowelangkulon.kendalkab.go.id)
+- **YouTube**: [@DesaKorowelangKulon](https://www.youtube.com/@DesaKorowelangKulon)
+- **Instagram**: [@desa_korowelangkulon](https://www.instagram.com/desa_korowelangkulon)
+- **Facebook**: [Pemdes Korowelang Kulon](https://web.facebook.com/profile.php?id=61579130750798)
+- **TikTok**: [@desa_korowelangkulon](https://www.tiktok.com/@desa_korowelangkulon)
+- **X / Twitter**: [@korowelangkln](https://x.com/korowelangkln)

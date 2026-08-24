@@ -15,7 +15,7 @@ export const GalleryModal: React.FC<GalleryModalProps> = ({ isOpen, onClose }) =
 
   if (!isOpen) return null;
 
-  const categories = ['Semua', 'Pelayanan Publik', 'Potensi Pertanian', 'Perikanan Pesisir', 'Fasilitas Warga', 'Kesehatan'];
+  const categories = ['Semua', 'Pelayanan Publik', 'Potensi Pertanian', 'Perikanan Pesisir', 'Kesehatan', 'Pendidikan', 'Ekonomi Warga'];
 
   const filteredItems = selectedCategory === 'Semua'
     ? GALLERY_ITEMS

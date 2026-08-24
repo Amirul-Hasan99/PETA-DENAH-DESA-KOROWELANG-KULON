@@ -72,13 +72,12 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview, onDownloadMap }
               <MapIcon className="w-5 h-5" />
             </div>
             <h2 className="font-display font-bold text-base text-[#001e40]">
-              Peta Administrasi & Bahaya Bencana
+              Peta Administrasi & Tata Guna Lahan
             </h2>
           </div>
           <p className="text-xs text-[#43474f] leading-relaxed mb-4">
-            Peta ini menyajikan batas wilayah administratif, tata letak
-            infrastruktur penting, serta pemetaan potensi risiko bencana alam di
-            area Desa Korowelang Kulon sebagai panduan mitigasi dan pembangunan.
+            Peta ini menyajikan batas wilayah administratif 3 dusun (Welangsari, Tambaksari, Rejosari), tata letak
+            lahan persawahan teknis (105,447 Ha), kawasan tambak nelayan (17,223 Ha), serta fasilitas umum Desa Korowelang Kulon.
           </p>
 
           <div className="flex flex-col gap-2">
