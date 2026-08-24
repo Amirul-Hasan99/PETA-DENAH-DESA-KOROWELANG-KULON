@@ -17,3 +17,19 @@
     text-wrap: balance;
   }
 }
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  nav, footer, .no-print {
+    display: none !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+}
