@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Download, Printer, Info, Check, ShieldCheck, MapPin, Compass, FileImage, FileText } from 'lucide-react';
+import { X, Download, Printer, Info, Check, ShieldCheck, GraduationCap, Compass, FileImage, FileText } from 'lucide-react';
 import { VillageMapGraphic } from './VillageMapGraphic';
 import { VILLAGE_INFO, LAND_USE_DATA } from '../data/villageData';
 import { KendalLogo } from './KendalLogo';
@@ -42,9 +42,15 @@ export const MapModal: React.FC<MapModalProps> = ({ isOpen, onClose }) => {
               <KendalLogo size="sm" className="w-7 h-9 sm:w-8 sm:h-10" />
             </div>
             <div>
-              <h2 className="font-display font-bold text-xs sm:text-base text-white line-clamp-1">
-                Peta Denah & Administrasi Desa Korowelang Kulon
-              </h2>
+              <div className="flex items-center gap-2">
+                <h2 className="font-display font-bold text-xs sm:text-base text-white line-clamp-1">
+                  Peta Denah & Administrasi Desa Korowelang Kulon
+                </h2>
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/15 text-[#a7c8ff] text-[10px] font-bold border border-white/20 hidden sm:inline-flex">
+                  <GraduationCap className="w-3 h-3 text-[#a7c8ff]" />
+                  <span>KKN 14 UNWAHAS 2026</span>
+                </span>
+              </div>
               <p className="text-[10px] sm:text-[11px] text-[#a7c8ff]">
                 Kecamatan Cepiring • Kabupaten Kendal • Jawa Tengah
               </p>
@@ -123,11 +129,11 @@ export const MapModal: React.FC<MapModalProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center justify-between mb-3.5">
                 <h3 className="font-display font-bold text-sm text-[#001e40] flex items-center gap-2">
                   <Compass className="w-4 h-4 text-[#003366]" />
-                  <span>Metadata & Informasi Wilayah</span>
+                  <span>Metadata & Wilayah</span>
                 </h3>
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#1b5e20] bg-[#e8f5e9] px-2 py-0.5 rounded">
-                  <ShieldCheck className="w-3 h-3" />
-                  <span>Resmi</span>
+                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#003366] bg-[#eff4ff] px-2 py-0.5 rounded border border-[#cbdbf5]">
+                  <GraduationCap className="w-3 h-3 text-[#003366]" />
+                  <span>KKN 14 UNWAHAS</span>
                 </span>
               </div>
 

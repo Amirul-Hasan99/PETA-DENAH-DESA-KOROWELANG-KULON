@@ -8,7 +8,7 @@ export { mapImageSrc };
  */
 export const downloadMapAsPng = async (
   imageSrc: string = mapImageSrc,
-  filename = 'PETA_DESA_KOROWELANG_KULON_CUSTOM.png'
+  filename = 'PETA_DESA_KOROWELANG_KULON_KKN14_UNWAHAS.png'
 ): Promise<void> => {
   try {
     const response = await fetch(imageSrc);
@@ -38,12 +38,10 @@ export const downloadMapAsPng = async (
 
 export const printMapAsPdf = (
   imageSrc: string = mapImageSrc,
-  title = 'PETA ADMINISTRASI, TATA GUNA LAHAN & DENAH DESA KOROWELANG KULON'
+  title = 'PETA ADMINISTRASI, TATA GUNA LAHAN & DENAH DESA KOROWELANG KULON - KKN 14 UNWAHAS 2026'
 ): void => {
-  // Buat jendela cetak khusus dengan dokumen terstruktur rapi
   const printWindow = window.open('', '_blank', 'width=1100,height=850');
   if (!printWindow) {
-    // Jika popup diblokir, gunakan window.print() standar
     window.print();
     return;
   }
@@ -94,7 +92,7 @@ export const printMapAsPdf = (
         }
         .header-title h1 {
           font-family: 'Plus Jakarta Sans', sans-serif;
-          font-size: 13pt;
+          font-size: 12.5pt;
           font-weight: 800;
           color: #001e40;
           margin: 0 0 2px 0;
@@ -111,10 +109,11 @@ export const printMapAsPdf = (
           font-size: 7.5pt;
           color: #003366;
           background: #eff4ff;
-          padding: 3px 8px;
+          padding: 4px 10px;
           border-radius: 4px;
           border: 1px solid #cbdbf5;
           font-weight: 700;
+          line-height: 1.3;
         }
         .map-container {
           width: 100%;
@@ -198,7 +197,7 @@ export const printMapAsPdf = (
     </head>
     <body>
       <div class="action-bar no-print">
-        <span style="font-weight:600; font-size:12px;">Pratinjau Dokumen Cetak Peta Desa Korowelang Kulon</span>
+        <span style="font-weight:600; font-size:12px;">Pratinjau Cetak Peta Desa Korowelang Kulon • KKN 14 UNWAHAS 2026</span>
         <button class="btn-print" onclick="window.print()">🖨️ Cetak / Simpan PDF</button>
       </div>
 
@@ -211,8 +210,8 @@ export const printMapAsPdf = (
           </div>
         </div>
         <div class="header-badge">
-          PETA DENAH & TATA GUNA LAHAN<br>
-          <span style="font-size:6.5pt; color:#475569;">Edisi Geospasial Resmi</span>
+          KARYA KKN KELOMPOK 14 UNWAHAS 2026<br>
+          <span style="font-size:6.5pt; color:#475569;">Peta Administrasi & Tata Guna Lahan</span>
         </div>
       </div>
 
@@ -241,7 +240,7 @@ export const printMapAsPdf = (
 
       <div class="footer">
         <span>Sistem Koordinat: WGS 84 / UTM Zone 49S • Skala Induk: 1:25.000</span>
-        <span>Sumber: Dokumen Resmi Desa Korowelang Kulon • https://korowelangkulon.kendalkab.go.id</span>
+        <span>Karya KKN Kelompok 14 Universitas Wahid Hasyim (UNWAHAS) 2026 • https://korowelangkulon.kendalkab.go.id</span>
       </div>
 
       <script>

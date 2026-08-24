@@ -150,4 +150,4 @@ export interface GalleryItem {
   date?: string;
 }
 
-export type ActiveTab = 'geografi' | 'profil' | 'galeri';
+export type ActiveTab = 'geografi' | 'profil';

@@ -3,10 +3,8 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { MapCard } from './components/MapCard';
 import { StatsGrid } from './components/StatsGrid';
-import { GallerySection } from './components/GallerySection';
 import { Footer } from './components/Footer';
 import { MapModal } from './components/MapModal';
-import { GalleryModal } from './components/GalleryModal';
 import { ProfileModal } from './components/ProfileModal';
 import { downloadMapAsPng } from './utils/mapExportUtils';
 import { ActiveTab } from './types';
@@ -14,13 +12,11 @@ import { ActiveTab } from './types';
 export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('geografi');
   const [isMapModalOpen, setIsMapModalOpen] = useState<boolean>(false);
-  const [isGalleryModalOpen, setIsGalleryModalOpen] = useState<boolean>(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState<boolean>(false);
 
   const handleSelectTab = (tab: ActiveTab) => {
     setActiveTab(tab);
     if (tab === 'profil') setIsProfileModalOpen(true);
-    if (tab === 'galeri') setIsGalleryModalOpen(true);
     if (tab === 'geografi') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -51,14 +47,9 @@ export default function App() {
 
         {/* 3 Stats & Potential Cards (Geografi, Luas Wilayah, Potensi Desa) */}
         <StatsGrid />
-
-        {/* Village Gallery & Civic Facilities Banner */}
-        <GallerySection
-          onOpenGallery={() => setIsGalleryModalOpen(true)}
-        />
       </main>
 
-      {/* 3. Footer with Village Navigation Links */}
+      {/* 3. Footer with Attribution & Links */}
       <Footer
         onSelectTab={handleSelectTab}
       />
@@ -67,14 +58,6 @@ export default function App() {
       <MapModal
         isOpen={isMapModalOpen}
         onClose={() => setIsMapModalOpen(false)}
-      />
-
-      <GalleryModal
-        isOpen={isGalleryModalOpen}
-        onClose={() => {
-          setIsGalleryModalOpen(false);
-          setActiveTab('geografi');
-        }}
       />
 
       <ProfileModal

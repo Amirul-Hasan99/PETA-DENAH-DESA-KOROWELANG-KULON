@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Eye, Download, Printer, Map as MapIcon, Maximize2, Check, FileDown, ShieldCheck, Sparkles } from 'lucide-react';
+import { Eye, Download, Printer, Map as MapIcon, Maximize2, Check, ShieldCheck, GraduationCap } from 'lucide-react';
 import { VillageMapGraphic } from './VillageMapGraphic';
-import { downloadMapAsPng, printMapAsPdf, mapImageSrc } from '../utils/mapExportUtils';
+import { downloadMapAsPng, printMapAsPdf } from '../utils/mapExportUtils';
 
 interface MapCardProps {
   onOpenPreview: () => void;
@@ -45,6 +45,10 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview }) => {
           </div>
 
           <div className="flex items-center gap-1.5">
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#eff4ff] text-[#003366] text-[11px] font-bold border border-[#cbdbf5]">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>KKN 14 UNWAHAS 2026</span>
+            </span>
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#e8f5e9] text-[#1b5e20] text-[11px] font-semibold border border-[#c8e6c9]">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Peta Resmi Pemdes</span>
@@ -116,7 +120,7 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview }) => {
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={handleDownloadPng}
-                className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#001e40] hover:bg-[#003366] text-white font-semibold text-xs shadow-xs active:scale-98"
+                className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#001e40] hover:bg-[#003366] text-white font-semibold text-xs shadow-xs active:scale-98 cursor-pointer"
               >
                 {downloadSuccess ? (
                   <>
@@ -133,7 +137,7 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview }) => {
 
               <button
                 onClick={handlePrintPdf}
-                className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#1b6d24] hover:bg-[#155d1d] text-white font-semibold text-xs shadow-xs active:scale-98"
+                className="flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg bg-[#1b6d24] hover:bg-[#155d1d] text-white font-semibold text-xs shadow-xs active:scale-98 cursor-pointer"
               >
                 <Printer className="w-3.5 h-3.5" />
                 <span>Cetak PDF</span>
@@ -142,7 +146,7 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview }) => {
 
             <button
               onClick={onOpenPreview}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-[#001e40] text-[#001e40] font-semibold text-xs hover:bg-[#eff4ff] active:scale-98"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-[#001e40] text-[#001e40] font-semibold text-xs hover:bg-[#eff4ff] active:scale-98 cursor-pointer"
             >
               <Eye className="w-3.5 h-3.5" />
               <span>Buka Tampilan Penuh (Interaktif)</span>

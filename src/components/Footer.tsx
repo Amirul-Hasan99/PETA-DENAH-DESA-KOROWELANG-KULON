@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, ExternalLink, Globe, MapPin } from 'lucide-react';
+import { ChevronRight, ExternalLink, Globe, MapPin, GraduationCap, Award } from 'lucide-react';
 import { VILLAGE_INFO } from '../data/villageData';
 import { ActiveTab } from '../types';
 import { KendalLogo } from './KendalLogo';
@@ -27,10 +27,16 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               </div>
             </div>
 
-            <p className="text-xs md:text-sm text-[#d5e3ff]/80 leading-relaxed max-w-lg">
-              Portal Geografis, Peta Denah Wilayah, dan Monografi Kependudukan Resmi Pemerintah Desa
-              Korowelang Kulon, Kecamatan Cepiring, Kabupaten Kendal, Provinsi Jawa Tengah.
-            </p>
+            {/* KKN Attribution Highlight Box */}
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-xs text-[#d5e3ff] space-y-1.5">
+              <div className="flex items-center gap-2 font-bold text-[#a7c8ff]">
+                <GraduationCap className="w-4 h-4 text-emerald-400" />
+                <span>Karya KKN Kelompok 14 UNWAHAS 2026</span>
+              </div>
+              <p className="text-[11px] leading-relaxed text-[#d5e3ff]/80">
+                Portal Geografis dan Peta Denah Wilayah ini merupakan program kerja pengabdian masyarakat oleh <strong>Mahasiswa KKN Kelompok 14 Universitas Wahid Hasyim (UNWAHAS) Semarang Tahun 2026</strong> dalam mendukung digitalisasi informasi desa.
+              </p>
+            </div>
 
             <div className="space-y-1.5 text-xs text-[#a7c8ff] pt-1">
               <div className="flex items-start gap-2">
@@ -124,19 +130,10 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           {/* Quick Navigation Links Column (Right 3 cols) */}
           <div className="md:col-span-3 space-y-3.5">
             <h3 className="font-display font-bold text-sm md:text-base text-white tracking-wide">
-              Navigasi Wilayah
+              Navigasi Halaman
             </h3>
 
             <ul className="space-y-2.5 text-xs md:text-sm">
-              <li>
-                <button
-                  onClick={() => onSelectTab('profil')}
-                  className="flex items-center gap-1.5 text-[#d5e3ff]/80 hover:text-white transition-colors group cursor-pointer"
-                >
-                  <ChevronRight className="w-3.5 h-3.5 text-[#799dd6] group-hover:translate-x-1 transition-transform" />
-                  <span>Profil & Monografi Desa</span>
-                </button>
-              </li>
               <li>
                 <button
                   onClick={() => onSelectTab('geografi')}
@@ -148,11 +145,11 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               </li>
               <li>
                 <button
-                  onClick={() => onSelectTab('galeri')}
+                  onClick={() => onSelectTab('profil')}
                   className="flex items-center gap-1.5 text-[#d5e3ff]/80 hover:text-white transition-colors group cursor-pointer"
                 >
                   <ChevronRight className="w-3.5 h-3.5 text-[#799dd6] group-hover:translate-x-1 transition-transform" />
-                  <span>Galeri Sarana & Fasilitas</span>
+                  <span>Profil & Monografi Desa</span>
                 </button>
               </li>
             </ul>
@@ -161,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
 
         {/* Bottom Legal & Copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#a7c8ff]/70 gap-3">
-          <p>© 2024 - 2026 Pemerintah Desa Korowelang Kulon. Hak Cipta Dilindungi.</p>
+          <p>© 2026 KKN Kelompok 14 Universitas Wahid Hasyim (UNWAHAS) & Pemerintah Desa Korowelang Kulon.</p>
           <p className="text-[11px]">Kecamatan Cepiring • Kabupaten Kendal • Jawa Tengah</p>
         </div>
       </div>
