@@ -71,7 +71,7 @@ git push -u origin main
 if %ERRORLEVEL% equ 0 (
     echo.
     echo ======================================================================
-    echo  [BERHASIL] Seluruh pembaruan sukses di-push ke GitHub!
+    echo  [BERHASIL] Seluruh pembaruan sukses di-push ke GitHub.
     echo  URL: https://github.com/Amirul-Hasan99/PETA-DENAH-DESA-KOROWELANG-KULON
     echo ======================================================================
 ) else (
@@ -83,7 +83,7 @@ if %ERRORLEVEL% equ 0 (
     if %ERRORLEVEL% equ 0 (
         echo.
         echo ======================================================================
-        echo  [BERHASIL] Seluruh pembaruan sukses di-push ke GitHub (branch: master)!
+        echo  [BERHASIL] Seluruh pembaruan sukses di-push ke GitHub (branch: master).
         echo  URL: https://github.com/Amirul-Hasan99/PETA-DENAH-DESA-KOROWELANG-KULON
         echo ======================================================================
     ) else (

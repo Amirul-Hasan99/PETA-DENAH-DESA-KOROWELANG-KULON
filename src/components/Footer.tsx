@@ -152,6 +152,15 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   <span>Profil & Monografi Desa</span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => onSelectTab('galeri')}
+                  className="flex items-center gap-1.5 text-[#d5e3ff]/80 hover:text-white transition-colors group cursor-pointer"
+                >
+                  <ChevronRight className="w-3.5 h-3.5 text-[#799dd6] group-hover:translate-x-1 transition-transform" />
+                  <span>Galeri Sarana & Fasilitas</span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>

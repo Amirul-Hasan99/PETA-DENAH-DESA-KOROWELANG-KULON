@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Landmark, Menu, X, ChevronRight, Map, GraduationCap } from 'lucide-react';
+import { Landmark, Menu, X, ChevronRight, Map, GraduationCap, Image as ImageIcon } from 'lucide-react';
 import { ActiveTab } from '../types';
 import { VILLAGE_INFO } from '../data/villageData';
 import { KendalLogo } from './KendalLogo';
@@ -15,6 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
   const navItems: { id: ActiveTab; label: string; icon: React.ReactNode }[] = [
     { id: 'geografi', label: 'Peta & Wilayah', icon: <Map className="w-4 h-4" /> },
     { id: 'profil', label: 'Profil Desa & Monografi', icon: <Landmark className="w-4 h-4" /> },
+    { id: 'galeri', label: 'Galeri & Fasilitas', icon: <ImageIcon className="w-4 h-4" /> },
   ];
 
   const handleNavClick = (tab: ActiveTab) => {
