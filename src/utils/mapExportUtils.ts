@@ -8,7 +8,7 @@ export { mapImageSrc };
  */
 export const downloadMapAsPng = async (
   imageSrc: string = mapImageSrc,
-  filename = 'PETA_DESA_KOROWELANG_KULON_KKN14_UNWAHAS.png'
+  filename = 'PETA_FASILITAS_UMUM_DESA_KOROWELANG_KULON_KKN14_UNWAHAS.png'
 ): Promise<void> => {
   try {
     const response = await fetch(imageSrc);
@@ -38,7 +38,7 @@ export const downloadMapAsPng = async (
 
 export const printMapAsPdf = (
   imageSrc: string = mapImageSrc,
-  title = 'PETA ADMINISTRASI, TATA GUNA LAHAN & DENAH DESA KOROWELANG KULON - KKN 14 UNWAHAS 2026'
+  title = 'PETA FASILITAS UMUM & DENAH ADMINISTRASI DESA KOROWELANG KULON - KKN 14 UNWAHAS 2026'
 ): void => {
   const printWindow = window.open('', '_blank', 'width=1100,height=850');
   if (!printWindow) {
@@ -211,7 +211,7 @@ export const printMapAsPdf = (
         </div>
         <div class="header-badge">
           KARYA KKN KELOMPOK 14 UNWAHAS 2026<br>
-          <span style="font-size:6.5pt; color:#475569;">Peta Administrasi & Tata Guna Lahan</span>
+          <span style="font-size:6.5pt; color:#475569;">Peta Fasilitas Umum & Administrasi</span>
         </div>
       </div>
 

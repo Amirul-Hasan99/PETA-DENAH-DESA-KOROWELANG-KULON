@@ -36,10 +36,10 @@ export const MapCard: React.FC<MapCardProps> = ({ onOpenPreview }) => {
             </div>
             <div>
               <h2 className="font-display font-bold text-sm sm:text-base text-[#001e40] leading-tight">
-                Peta Administrasi & Tata Guna Lahan
+                Peta Fasilitas Umum & Wilayah Desa
               </h2>
               <p className="text-[11px] text-[#737780] hidden sm:block">
-                Kecamatan Cepiring, Kabupaten Kendal (Luas Wilayah: 162,447 Ha)
+                Kecamatan Cepiring, Kabupaten Kendal (Karya KKN 14 UNWAHAS 2026)
               </p>
             </div>
           </div>

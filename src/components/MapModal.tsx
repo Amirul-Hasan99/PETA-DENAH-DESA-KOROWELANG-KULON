@@ -44,7 +44,7 @@ export const MapModal: React.FC<MapModalProps> = ({ isOpen, onClose }) => {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="font-display font-bold text-xs sm:text-base text-white line-clamp-1">
-                  Peta Denah & Administrasi Desa Korowelang Kulon
+                  Peta Fasilitas Umum & Denah Desa Korowelang Kulon
                 </h2>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/15 text-[#a7c8ff] text-[10px] font-bold border border-white/20 hidden sm:inline-flex">
                   <GraduationCap className="w-3 h-3 text-[#a7c8ff]" />
