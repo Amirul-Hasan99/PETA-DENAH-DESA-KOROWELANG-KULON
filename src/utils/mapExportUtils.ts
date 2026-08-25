@@ -1,4 +1,4 @@
-import mapImageSrc from '@/PETA KOROWELANG KULON CUSTOM.PNG';
+import mapImageSrc from '../assets/peta-korowelang-kulon.png';
 
 export { mapImageSrc };
 

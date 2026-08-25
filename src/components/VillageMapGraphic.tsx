@@ -42,8 +42,8 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
   const handleWheel = (e: React.WheelEvent) => {
     if (!interactive) return;
     e.preventDefault();
-    const zoomDelta = e.deltaY < 0 ? 0.15 : -0.15;
-    setZoomLevel(prev => Math.min(Math.max(Number((prev + zoomDelta).toFixed(2)), 0.6), 3.5));
+    const zoomDelta = e.deltaY < 0 ? 0.2 : -0.2;
+    setZoomLevel(prev => Math.min(Math.max(Number((prev + zoomDelta).toFixed(2)), 0.6), 4.5));
   };
 
   // Touch support for mobile devices
@@ -75,10 +75,10 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
 
   const handleDoubleClick = () => {
     if (!interactive) return;
-    if (zoomLevel > 1.2) {
+    if (zoomLevel > 1.5) {
       resetView();
     } else {
-      setZoomLevel(2);
+      setZoomLevel(2.5);
     }
   };
 
@@ -92,7 +92,7 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
       {interactive && (
         <div className="absolute top-3 right-3 z-30 flex flex-col gap-1.5 bg-white/95 backdrop-blur-md p-1.5 rounded-lg border border-[#cbdbf5] shadow-md">
           <button
-            onClick={() => setZoomLevel(prev => Math.min(Number((prev + 0.25).toFixed(2)), 3.5))}
+            onClick={() => setZoomLevel(prev => Math.min(Number((prev + 0.3).toFixed(2)), 4.5))}
             className="p-1.5 rounded hover:bg-[#eff4ff] text-[#001e40] transition-colors cursor-pointer"
             title="Perbesar Peta (+)"
             aria-label="Zoom In"
@@ -100,7 +100,7 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
             <ZoomIn className="w-4 h-4" />
           </button>
           <button
-            onClick={() => setZoomLevel(prev => Math.max(Number((prev - 0.25).toFixed(2)), 0.6))}
+            onClick={() => setZoomLevel(prev => Math.max(Number((prev - 0.3).toFixed(2)), 0.6))}
             className="p-1.5 rounded hover:bg-[#eff4ff] text-[#001e40] transition-colors cursor-pointer"
             title="Perkecil Peta (-)"
             aria-label="Zoom Out"
@@ -135,7 +135,7 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
       {interactive && (
         <div className="absolute bottom-3 left-3 z-20 hidden sm:flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-md border border-[#cbd5e1] text-[11px] font-medium text-[#001e40] shadow-xs pointer-events-none">
           <Move className="w-3.5 h-3.5 text-[#003366]" />
-          <span>Geser mouse untuk navigasi • Scroll / Klik ganda untuk zoom</span>
+          <span>Geser mouse untuk navigasi • Scroll / Klik ganda untuk zoom Ultra-HD</span>
         </div>
       )}
 
@@ -156,16 +156,23 @@ export const VillageMapGraphic: React.FC<VillageMapGraphicProps> = ({
         <div
           className="transition-transform duration-75 origin-center flex items-center justify-center max-w-full"
           style={{
-            transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoomLevel})`,
+            transform: `translate3d(${pan.x}px, ${pan.y}px, 0) scale(${zoomLevel})`,
             willChange: 'transform',
           }}
         >
           <img
             src={mapImageSrc}
-            alt="Peta Denah & Administrasi Desa Korowelang Kulon"
+            alt="Peta Fasilitas Umum & Denah Administrasi Desa Korowelang Kulon"
             className="w-full h-auto max-h-[800px] object-contain rounded shadow-md border border-[#cbd5e1]/70"
             draggable={false}
             loading="eager"
+            decoding="async"
+            onError={(e) => {
+              // Safe fallback to public static root
+              if (e.currentTarget.src !== window.location.origin + '/peta-korowelang-kulon.png') {
+                e.currentTarget.src = '/peta-korowelang-kulon.png';
+              }
+            }}
           />
         </div>
       </div>
