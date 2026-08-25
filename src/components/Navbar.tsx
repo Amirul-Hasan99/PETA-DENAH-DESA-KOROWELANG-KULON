@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Landmark, Menu, X, ChevronRight, Map, GraduationCap, Image as ImageIcon } from 'lucide-react';
+import { Landmark, Menu, X, ChevronRight, Map, Image as ImageIcon } from 'lucide-react';
 import { ActiveTab } from '../types';
 import { VILLAGE_INFO } from '../data/villageData';
 import { KendalLogo } from './KendalLogo';
@@ -39,10 +39,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
               <span className="font-display font-bold text-base md:text-lg text-[#001e40] tracking-tight group-hover:text-[#003366] transition-colors block">
                 {VILLAGE_INFO.name}
               </span>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#eff4ff] text-[#003366] text-[10px] font-bold border border-[#cbdbf5] hidden lg:inline-flex">
-                <GraduationCap className="w-3 h-3 text-[#003366]" />
-                <span>KKN 14 UNWAHAS 2026</span>
-              </span>
             </div>
             <span className="text-[11px] text-[#737780] font-medium hidden sm:block">
               Portal Peta Wilayah • Kec. Cepiring, Kab. Kendal
@@ -70,11 +66,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
               </button>
             );
           })}
-
-          <div className="pl-2 border-l border-[#e2e8f0] hidden lg:flex items-center gap-1.5 text-xs text-[#003366] font-semibold bg-[#f8faff] px-3 py-1.5 rounded-lg border">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>KKN Kelompok 14 UNWAHAS</span>
-          </div>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -92,10 +83,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-[#e5eeff] px-4 pt-2 pb-4 space-y-1.5 shadow-lg animate-in slide-in-from-top-2 duration-200">
-          <div className="py-1.5 px-3 bg-[#eff4ff] rounded-lg text-xs font-semibold text-[#003366] flex items-center gap-1.5 mb-1">
-            <GraduationCap className="w-4 h-4 text-[#003366]" />
-            <span>KKN Kelompok 14 UNWAHAS 2026</span>
-          </div>
 
           {navItems.map(item => {
             const isActive = activeTab === item.id;
