@@ -76,7 +76,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenGallery })
                 <span className="font-medium text-[#001e40]">Standar Pelayanan Prima (PATEN)</span>
               </div>
               <span className="text-[#003366] font-semibold flex items-center gap-1 group-hover:underline">
-                6 Dokumentasi Foto →
+                {GALLERY_ITEMS.length} Dokumentasi Foto →
               </span>
             </div>
           </div>
